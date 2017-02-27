@@ -7,7 +7,7 @@
 //
 
 #include <stdio.h>
-#include "../include/apue.h"
+#include "apue.h"
 
 int main(int argc, char** argv) {
 	if (argc < 2) {
