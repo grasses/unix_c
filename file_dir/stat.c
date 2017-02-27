@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 	char ptr[512];
 	for (int i = 1; i < argc; ++i) {
 		if (lstat(argv[i], &buff) < 0) {
-			err_ret("last(%s) error", argv[i]);
+			printf("last(%s) error", argv[i]);
 		}
 		if (S_ISREG(buff.st_mode)) 
 			sprintf(ptr, "%s: regular file\n", argv[i]);
