@@ -4,7 +4,7 @@
 #include <fcntl.h>
 
 int main(void) {
-	int fd = open("./ps.out", O_WRONLY|O_CREAT|O_TRUNC, 0644);
+	int fd = open("out.ps.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644);
 	if (fd < 0) {
 		perror("open file error\n");
 		exit(1);
