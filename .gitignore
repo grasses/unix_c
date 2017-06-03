@@ -12,4 +12,4 @@ CMakeLists.txt
 *.db
 *.log
 *.out
-.idea
+.idea/
