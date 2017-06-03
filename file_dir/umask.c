@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 	if(creat(a, RWRWRW) < 0) {
 		err_dump("%s: create file error", a);
 	}
-	umask(S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH);
+	//umask(S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH);
 	if (creat(b, RWRWRW) < 0) {
 		err_dump("%s: create file error", b);
 	}
