@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 
 int main(void) {
 	int fd[2], ret;
@@ -24,13 +25,13 @@ int main(void) {
 
 		fd[1] = open("share_fd.txt", O_WRONLY|O_CREAT);
 		if (fd[1] < 0) {
-			perrro("=> child: open error\n");
+			perror("=> child: open error\n");
 			exit(1);
 		}
 		char cbuff[1024];
-		ret = read(fd[1], mbuff, sizeof(cbuff));
+		ret = read(fd[1], buff, sizeof(cbuff));
 		if (ret >= 0) {
-			printf("=> child: read ok, info = %s\n", mbuff);
+			printf("=> child: read ok, info = %s\n", buff);
 		}
 	} else {
 		perror("fork error\n");
