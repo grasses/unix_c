@@ -14,6 +14,7 @@
 int main(int argc, char** argv) {
 	if (argc != 2) {
 		err_ret("Usage: %s filename", argv[0]);
+		return 0;
 	}
 	char cmd[128];
 	sprintf(cmd, "ls -l %s", argv[1]);

@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+cmake-build-debug
+
+# C extensions
+*.so
+
+# clion cmake
+CMakeLists.txt
+
+.DS_Store
+
+*.db
+*.log
+*.out
+.idea
